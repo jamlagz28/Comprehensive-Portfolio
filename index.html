@@ -3,61 +3,224 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+<title>JamLagz Portfolio</title>
 <link rel="stylesheet" href="style.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-
+<!-- HEADER -->
 <header class="header">
-<h1>My Portfolio</h1>
-<p>Graphic Designer & Web Developer Portfolio</p>
-<button id="menuBtn">☰</button>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+        <h1>JamLagz Portfolio</h1>
+        <p>Graphic Designer & Web Developer</p>
+        <button id="menuBtn">☰</button>
+    </div>
 </header>
 
-
+<!-- NAVIGATION -->
 <nav id="navMenu" class="nav">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
 </nav>
 
+<!-- PROFILE SECTION -->
+<section class="profile section">
+    <div class="profile-container">
+        <!-- Profile Image -->
+        <div class="profile-image">
+            <img src="img/profile.jpg" alt="Profile photo of Graphic Designer and Web Developer">
+        </div>
 
-<section id="about" class="section">
-<h2>About Me</h2>
-<p>I am a Graphic Designer and Web Developer who creates simple, clean, and functional designs for both visual and web projects.</p>
+        <!-- Profile Info -->
+        <div class="profile-info">
+            <h2 class="profile-name">James B. Laag</h2>
+            <h4 class="profile-role">Graphic Designer & Web Developer</h4>
+            <p class="profile-bio">
+                Passionate about creating visually appealing designs and building clean, user-friendly websites that deliver real value.
+            </p>
+
+            <!-- Social Media -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/JamLagz28" target="_blank" title="Follow me on Facebook">
+                    <img src="img/facebook-icon.png" alt="Facebook Logo">
+                </a>
+                <a href="https://github.com/jamlagz28" target="_blank" title="Follow me on GitHub">
+                    <img src="img/github-icon.png" alt="GitHub Logo">
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- FEATURED WORKS -->
+<section class="section">
+    <h2 class="section-title">Featured Works</h2>
+    <div class="image-grid">
+        <div class="image-box">
+            <a href="img/amage1.png" target="_blank">
+                <img src="img/amage1.png" alt="Project 1">
+            </a>
+            <h3 class="image-description">CREATING DESIGN TEMPLATE</h3>
+        </div>
 
+        <div class="image-box">
+            <a href="img/amage2.jpg" target="_blank">
+                <img src="img/amage2.jpg" alt="Project 2">
+            </a>
+            <h3 class="image-description">CREATING DESIGN TEMPLATE</h3>
+        </div>
+
+        <div class="image-box">
+            <a href="img/amage3.png" target="_blank">
+                <img src="img/amage3.png" alt="Project 3">
+            </a>
+            <h3 class="image-description">CREATING DESIGN TEMPLATE</h3>
+        </div>
+
+        <div class="image-box">
+            <a href="img/amage4.jpg" target="_blank">
+                <img src="img/amage4.jpg" alt="Project 4">
+            </a>
+            <h3 class="image-description">CREATING DESIGN TEMPLATE</h3>
+        </div>
+
+   <div class="image-box">
+            <a href="img/amage5.png" target="_blank">
+                <img src="img/amage5.png" alt="Project 5">
+            </a>
+            <h3 class="image-description">CREATING SIMPLE WEB PAGE</h3>
+        </div>
+
+           <div class="image-box">
+            <a href="img/amage6.png" target="_blank">
+                <img src="img/amage6.png" alt="Project 6">
+            </a>
+            <h3 class="image-description">PROJECT TEAM WEBSITE</h3>
+        </div>
+
+           <div class="image-box">
+            <a href="img/amage7.png" target="_blank">
+                <img src="img/amage7.png" alt="Project 7">
+            </a>
+            <h3 class="image-description">PRODUCT WEB PAGE</h3>
+        </div>
+
+   <div class="image-box">
+            <a href="img/amage8.png" target="_blank">
+                <img src="img/amage8.png" alt="Project 8">
+            </a>
+            <h3 class="image-description">UI/UX DESIGN</h3>
+        </div>
+
+   <div class="image-box">
+            <a href="img/amage9.JPG" target="_blank">
+                <img src="img/amage9.JPG" alt="Project 9">
+            </a>
+            <h3 class="image-description">CREATING DESIGN TEMPLATE</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT ME -->
+<section id="about" class="section colored-section">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-text">
+        I am a Graphic Designer and Web Developer who creates simple, clean, and functional designs for both visual and web projects.
+    </p>
+</section>
+
+<!-- SERVICES -->
 <section id="services" class="section gray">
-<h2>What I Do</h2>
-<ul>
-<li>Graphic Design</li>
-<li>Logo & Branding Design</li>
-<li>Social Media Graphics</li>
-<li>Web Design (UI Layouts)</li>
-<li>Front-End Web Development</li>
-</ul>
+    <h2 class="section-title">What I Do</h2>
+    <ul class="service-list">
+        <li>Graphic Design</li>
+        <li>Social Media Graphics</li>
+        <li>Web Design (UI Layouts)</li>
+        <li>Front-End Web Development</li>
+    </ul>
 </section>
 
 
-<section id="skills" class="section">
-<h2>Skills</h2>
-<p>Canva, Illustrator, HTML, CSS, JavaScript</p>
+<!-- SKILLS -->
+<section id="skills" class="section colored-section">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skill">
+        <p>Canva</p>
+        <div class="skill-bar">
+            <div class="skill-fill" data-percent="85%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>Picsart</p>
+        <div class="skill-bar">
+            <div class="skill-fill" data-percent="83%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>HTML</p>
+        <div class="skill-bar">
+            <div class="skill-fill" data-percent="80%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>CSS</p>
+        <div class="skill-bar">
+            <div class="skill-fill" data-percent="86%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>JavaScript</p>
+        <div class="skill-bar">
+            <div class="skill-fill" data-percent="79%"></div>
+        </div>
+    </div>
 </section>
 
-
+<!-- CONTACT -->
 <section id="contact" class="section gray">
-<h2>Contact</h2>
-<p>Email: jameslaag1228@email.com</p>
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-info">
+
+        <p>
+            <img src="img/gmail.png" alt="Gmail Logo" class="contact-icon">
+            Email: <a href="mailto:jameslaag1228@email.com">jameslaag1228@gmail.com</a>
+        </p>
+
+        <p>
+            <img src="img/messenger.png" alt="Messenger Logo" class="contact-icon">
+            FB Messenger: <a href="https://www.facebook.com/JamLagz28" target="_blank">James Laag</a>
+        </p>
+
+        <p>
+            <img src="img/phone.png" alt="Phone Logo" class="contact-icon">
+            Phone: <a href="tel:+639813527364">+63 9813527364</a>
+        </p>
+
+        <p>
+            <img src="img/location.png" alt="Location Logo" class="contact-icon">
+            Location: Zone 5, Lunocan, Manolo Fortich, Bukidnon, Philippines
+        </p>
+
+    </div>
 </section>
 
-
+<!-- FOOTER -->
 <footer class="footer">
-<p>© 2026 My Portfolio</p>
+    <p>© 2026 JamLagz Portfolio</p>
 </footer>
-
 
 <script src="script.js"></script>
 </body>

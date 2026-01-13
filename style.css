@@ -1,115 +1,346 @@
+/* ----------------------------------------
+   GLOBAL STYLES
+---------------------------------------- */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
-}
-
-
-body {
-line-height: 1.6;
-}
-
-
-.header {
-    background-image: url("images/bg.jpg"); /* path to your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    color: #fff;
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
-}
-
-/* Optional dark overlay for readability */
-.header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-/* Make text appear above overlay */
-.header h1,
-.header p,
-#menuBtn {
-    position: relative;
-    z-index: 1;
-}
-
-#menuBtn {
-position: absolute;
-right: 20px;
-top: 20px;
-font-size: 22px;
-background: none;
-color: #fff;
-border: none;
-cursor: pointer;
-}
-
-
-.nav {
-display: flex;
-justify-content: center;
-gap: 20px;
-background: #333;
-padding: 10px;
-}
-
-
-.nav a {
-color: #fff;
-text-decoration: none;
-}
-
-
-.section {
-padding: 40px 20px;
-max-width: 900px;
-margin: auto;
-}
-
-
-.gray {
-background: #f4f4f4;
-}
-
-
-.section h2 {
-margin-bottom: 15px;
-}
-
-
-.footer {
-text-align: center;
-padding: 15px;
-background: #222;
-color: #fff;
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-.nav {
-flex-direction: column;
-display: none;
-}
-
-
-.nav.show {
-display: flex;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 body {
+    line-height: 1.6;
     background-image: url("img/background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    color: #333;
+}
+
+/* ----------------------------------------
+   HEADER
+---------------------------------------- */
+.header {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #FFD700;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.6);
+}
+
+.header p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* MENU BUTTON */
+#menuBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ----------------------------------------
+   NAVIGATION
+---------------------------------------- */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+}
+
+.nav a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        display: none;
+    }
+    .nav.show { display: flex; }
+}
+
+/* ----------------------------------------
+   SECTIONS
+---------------------------------------- */
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.gray {
+    background: rgba(0,0,0,0.05);
+}
+
+.colored-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 50px 20px;
+    margin: 20px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+    border-left: 5px solid #FFD700;
+    padding-left: 10px;
+}
+
+.section-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* ----------------------------------------
+   PROFILE SECTION
+---------------------------------------- */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-image img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #FFD700;
+}
+
+.profile-info {
+    max-width: 600px;
+}
+
+.profile-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+.profile-role {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.profile-bio {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+/* ----------------------------------------
+   IMAGE GRID
+---------------------------------------- */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.image-box {
+    overflow: hidden;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: rgba(255,255,255,0.05);
+    padding-bottom: 10px;
+}
+
+.image-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
+
+.image-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+.image-description {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #FFD700;
+}
+
+/* ----------------------------------------
+   CONTACT SECTION
+---------------------------------------- */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contact-icon {
+    width: 28px;
+    height: 28px;
+}
+
+/* Links inside contact */
+.contact-info a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #fff;
+}
+
+/* ----------------------------------------
+   FOOTER
+---------------------------------------- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* ----------------------------------------
+   SERVICES SECTION STYLING
+---------------------------------------- */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    border-left: 5px solid #FFD700; /* accent line */
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    list-style: none; /* remove default bullets */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive columns */
+    gap: 20px;
+}
+
+.service-list li {
+    background: rgba(255, 215, 0, 0.1); /* light gold background */
+    border-left: 5px solid #FFD700; /* golden accent */
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.service-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 215, 0, 0.2); /* slightly stronger highlight on hover */
+}
+
+/* Skill Bars */
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill p {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.skill-bar {
+    width: 100%;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 25px;
+}
+
+.skill-fill {
+    height: 100%;
+    width: 0; /* starts at 0, will animate */
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    border-radius: 10px;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 25px;
+    color: #fff;
+    font-weight: bold;
+    transition: width 2s ease-in-out;
 }
