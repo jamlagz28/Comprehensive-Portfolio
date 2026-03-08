@@ -29,7 +29,10 @@ body {
 
 .header-overlay {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
     background: rgba(0,0,0,0.5);
     z-index: 1;
 }
@@ -85,14 +88,6 @@ body {
 
 .nav a:hover {
     color: #fff;
-}
-
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        display: none;
-    }
-    .nav.show { display: flex; }
 }
 
 /* ----------------------------------------
@@ -255,11 +250,9 @@ body {
     height: 28px;
 }
 
-/* Links inside contact */
 .contact-info a {
     color: #FFD700;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
 .contact-info a:hover {
@@ -267,38 +260,18 @@ body {
 }
 
 /* ----------------------------------------
-   FOOTER
+   SERVICES
 ---------------------------------------- */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: #fff;
-    font-weight: 500;
-}
-
-/* ----------------------------------------
-   SERVICES SECTION STYLING
----------------------------------------- */
-.section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #222;
-    border-left: 5px solid #FFD700; /* accent line */
-    padding-left: 10px;
-    margin-bottom: 20px;
-}
-
 .service-list {
-    list-style: none; /* remove default bullets */
+    list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
 .service-list li {
-    background: rgba(255, 215, 0, 0.1); /* light gold background */
-    border-left: 5px solid #FFD700; /* golden accent */
+    background: rgba(255, 215, 0, 0.1);
+    border-left: 5px solid #FFD700;
     padding: 15px 20px;
     border-radius: 10px;
     font-size: 1.1rem;
@@ -309,11 +282,12 @@ body {
 
 .service-list li:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 215, 0, 0.2); /* slightly stronger highlight on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Skill Bars */
+/* ----------------------------------------
+   SKILLS
+---------------------------------------- */
 .skill {
     margin-bottom: 20px;
 }
@@ -321,7 +295,6 @@ body {
 .skill p {
     font-weight: 600;
     margin-bottom: 5px;
-    color: #222;
 }
 
 .skill-bar {
@@ -334,7 +307,7 @@ body {
 
 .skill-fill {
     height: 100%;
-    width: 0; /* starts at 0, will animate */
+    width: 0;
     background: linear-gradient(90deg, #FFD700, #FFA500);
     border-radius: 10px;
     text-align: right;
@@ -343,4 +316,108 @@ body {
     color: #fff;
     font-weight: bold;
     transition: width 2s ease-in-out;
+}
+
+/* ----------------------------------------
+   FOOTER
+---------------------------------------- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+}
+
+/* ----------------------------------------
+   RESPONSIVE DESIGN
+---------------------------------------- */
+
+/* TABLETS */
+@media (max-width: 768px) {
+
+.nav {
+    flex-direction: column;
+    display: none;
+}
+
+.nav.show {
+    display: flex;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+}
+
+.header p {
+    font-size: 1rem;
+}
+
+.profile-container {
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile-name {
+    font-size: 2rem;
+}
+
+.profile-role {
+    font-size: 1.1rem;
+}
+
+.profile-bio {
+    font-size: 1rem;
+}
+
+.image-box img {
+    height: 160px;
+}
+
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+
+.header {
+    padding: 80px 15px;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+}
+
+.header p {
+    font-size: 0.9rem;
+}
+
+.section {
+    padding: 40px 15px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+}
+
+.profile-image img {
+    width: 130px;
+    height: 130px;
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+}
+
+.image-grid {
+    grid-template-columns: 1fr;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+}
+
+.skill-bar {
+    height: 20px;
+}
+
 }
